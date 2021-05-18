@@ -4,7 +4,7 @@ const slugify = require("slugify")
 exports.onCreateNode = ({ node, actions }) => {
 	const { createNodeField } = actions
 	if (node.internal.type === `MarkdownRemark`) {
-		const slug = slugify((node.frontmatter && node.frontmatter.title) || "test").toLowerCase()
+		const slug = slugify(node.frontmatter && node.frontmatter.title).toLowerCase()
 
 		createNodeField({
 			node,

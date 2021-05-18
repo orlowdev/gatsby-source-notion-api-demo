@@ -6,7 +6,7 @@ module.exports = {
 	},
 	plugins: [
 		{
-			resolve: require.resolve("gatsby-source-notion-api"),
+			resolve: "gatsby-source-notion-api",
 			options: {
 				token: NOTION_TOKEN,
 				databaseId: NOTION_DATABASE,
